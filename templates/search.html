@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Tyoe" content="text/javascript" />
+<title>ここにキーワードを含むページのタイトルを記入</title>
+<meta name="Description" content="ここにキーワードを含むページの説明文を記入" />
+<meta name="Keywords" content="キーワード,キーワード,キーワード" />
+<!--
+<link rel="icon" href="https://saetl.net/favicon.ico" type="image/x-icon" />
+<link rel="Shortcut Icon" type="img/x-icon" href="https://saetl.net/favicon.ico" />
+-->
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style_search.css') }}">
+<link href="../static/css/style_search.css" rel="stylesheet" type="text/css" />
+<!--
+<link href="css/lightbox.css" rel="stylesheet" type="text/css" />
+-->
+</head>
+
+<body>
+
+<!--　ヘッダー（サイト名やサイトの内容を示す部分）　-->
+<div id="header">
+  <div id="logo">
+    <ul>
+     <li>検索結果</li>
+    </ul>
+    <!-- / #logo --></div>
+</div>
+
+<!--　ここからメインの内容　-->
+<div id="container">
+
+  
+  <div id="category1">
+    <h2>オススメ１</h2>
+    <table class="ta2">
+      <tr>
+        <th colspan="2">{{ shop1.0 }}</th>
+      </tr>
+      <tr>
+        <td>住所</td>
+        <td>{{ shop1.1 }}</td>
+      </tr>
+      <tr>
+        <td>店のページ</td>
+        <td><a href="{{shop1.2}}">{{ shop1.2 }}</a></td>
+      </tr>
+      <tr>
+        <td>飲み放題</td>
+        <td>{{ shop1.3 }}</td>
+      </tr>
+      <tr>
+        <td>予算</td>
+        <td>{{ shop1.4 }}</td>
+      </tr>
+      <tr>
+        <td>開店日</td>
+        <td>{{ shop1.5 }}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="category2">
+    <h2>オススメ２</h2>
+    <table class="ta2">
+      <tr>
+        <th colspan="2">{{ shop2.0 }}</th>
+      </tr>
+      <tr>
+        <td>住所</td>
+        <td>{{ shop2.1 }}</td>
+      </tr>
+      <tr>
+        <td>店のページ</td>
+        <td><a href="{{shop2.2}}">{{ shop2.2 }}</a></td>
+      </tr>
+      <tr>
+        <td>飲み放題</td>
+        <td>{{ shop2.3 }}</td>
+      </tr>
+      <tr>
+        <td>予算</td>
+        <td>{{ shop2.4 }}</td>
+      </tr>
+      <tr>
+        <td>開店日</td>
+        <td>{{ shop2.5 }}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="category3">
+    <h2>オススメ３</h2>
+    <table class="ta2">
+      <tr>
+        <th colspan="2">{{ shop3.0 }}</th>
+      </tr>
+      <tr>
+        <td>住所</td>
+        <td>{{ shop3.1 }}</td>
+      </tr>
+      <tr>
+        <td>店のページ</td>
+        <td><a href="{{shop3.2}}">{{ shop3.2 }}</a></td>
+      </tr>
+      <tr>
+        <td>飲み放題</td>
+        <td>{{ shop3.3 }}</td>
+      </tr>
+      <tr>
+        <td>予算</td>
+        <td>{{ shop3.4 }}</td>
+      </tr>
+      <tr>
+        <td>開店日</td>
+        <td>{{ shop3.5 }}</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+<!--　ページの下部分　-->
+<div id="footer">
+  <p>Copyright(C) © 2023 Yuki Kanemitsu </p>
+  <!-- / #footer --></div>
+
+<!-- JavaScript設定 --> 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> <!--googleのCDN（ネットワーク経由でコンテンツを提供するサービス）よりjqueryをロード--> 
+<script type="text/javascript" src="js/jQuery.ScrollTo.js"></script> <!--ページ内スクロール-->
+<script type="text/javascript" src="js/lightbox.js"></script> <!--画像拡大-->
+<script type="text/javascript">
+$(function() {   
+     $(".ta2 tr:even").addClass("even");});
+</script>
+<!-- テーブル1行ごと背景色変更 -->
+</body>
+</html>

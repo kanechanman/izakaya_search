@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Tyoe" content="text/javascript" />
+<title>２軒目検索アプリ</title>
+<meta name="Description" content="２軒目の居酒屋を探してるならこれ！２軒目をランダムに検索" />
+<meta name="Keywords" content="居酒屋,２軒目,検索" />
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style_main.css') }}">
+<link href="../static/css/style_main.css" rel="stylesheet" type="text/css" />
+</head>
+ 
+<body>
+
+<!--　ヘッダー（サイト名やサイトの内容を示す部分）　-->
+<div id="header">
+  
+  <div id="logo">
+    <ul>
+     <li>２軒目テキトーに検索！</li>
+    </ul>
+  </div>
+</div>
+
+<!--　ここからメインの内容　-->
+<div id="container">
+
+  <div id="home">
+  
+   <img src="../static/images/izakaya-image.jpg" width="838" height="500" alt="image" />
+   <h1>都道府県名と駅名を入力してください</h1>
+   <form action="/results" method="POST" enctype="multipart/form-data">
+     <div>
+       <label for="pref">都道府県名：</label>
+       <input type="text" id="pref" name="pref" placeholder="○○県" class="form1" required>
+       <label for="pref">駅名：</label>
+       <input type="text" id="station" name="station" placeholder="「駅」は必要ありません" class="form2" required>
+     </div>
+     <div>
+       <label for="pref">飲み放題</label>
+       <select name="drink">
+        <option value="ari">あり</option>
+        <option value="nasi">どちらでも</option>
+       </select>
+       <label for="pref">予算</label>
+       <select name="yosan">
+        <option value="yosan0">特になし</option>
+        <option value="B011">1001~1500円</option>
+        <option value="B001">1501~2000円</option>
+        <option value="B002">2001~3000円</option>
+        <option value="B003">3001~4000円</option>
+        <option value="B008">4001~5000円</option>
+        <option value="B004">5001~7000円</option>
+       </select>
+     </div>
+     <button type="submit">検索</button>
+   </form>
+
+   <h3>
+    <span>※都道府県名と駅名は正式名称(漢字など)で入力してください。（例：あいち✕、愛知県〇）</span>
+  </h3>
+
+  <h2>概要</h2>
+  <p>HotpepperAPIを使用して、駅から半径1km以内の条件に合うお店を検索してランダムに3つ表示します。</p>
+    
+</div>
+
+
+  <!--　ページの下部分　-->
+<div id="footer">
+  <p>Copyright(C) © 2023 Yuki Kanemitsu </p>
+</div>

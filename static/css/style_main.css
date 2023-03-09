@@ -1,0 +1,145 @@
+/* ページ全体のスタイル */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #261818;
+  color: #ffffff;
+}
+
+/* リンクのスタイル */
+a {
+  color: #007ACC;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ヘッダーのスタイル */
+#header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+}
+
+#logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* メインコンテンツのスタイル */
+#container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+#home {
+  text-align: center;
+  position: relative;
+  margin-top: 50px;
+  height: 800px;
+}
+
+#home img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1; /* メインの内容より下に表示されるようにする */
+}
+
+h1 {
+  font-size: 36px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+form {
+  display: inline-block;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+  margin-bottom: 10px;
+}
+
+select {
+  margin-left: 20px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #007ACC;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #005DA7;
+}
+
+h2 {
+  font-size: 30px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size:25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+span {
+  color: #FF0000;
+}
+
+
+/* フッターのスタイル */
+#footer {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #000000;
+}
